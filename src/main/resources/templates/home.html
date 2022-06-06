@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}" />
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
+    <header>
+        <div class="px-3 py-2 bg-dark text-white">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                        <li>
+                            <a href="/" class="nav-link text-secondary">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="/"></use></svg>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/bank" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="/bank"></use></svg>
+                                Банк
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/information" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"></use></svg>
+                                Информация
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/about_Me" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"></use></svg>
+                                Обо мне
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="px-3 py-2 border-bottom mb-3">
+            <div class="container d-flex flex-wrap justify-content-center">
+                <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto">
+                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                </form>
+
+
+            </div>
+        </div>
+    </header>
+
+</head>
+
+<body>
+    <p th:text="'Hi, ' + ${title}+'!'"/>
+    <a href="#example">Переход на заголовок 6</a>
+    <h1>Заголовок 1</h1>
+    <h2>Заголовок 2</h2>
+    <h3>Заголовок 3</h3>
+    <h4>Заголовок 4</h4>
+    <h5>Заголовок 5</h5>
+    <a name="example"></a>
+    <h6>Заголовок 6</h6>
+
+    <p>Этот <strike>текст</strike> будет абзацем</p>
+    <p>Этот <strong>текст</strong> <em>будет абзацем</em></p>
+
+    <p> <u>Этот текст будет абзацем</u></p>
+    <p> Этот текст будет абзацем</p>
+
+    <p> Станислав Лец утверждал: <q>Чаще всего выход там, где был вход</q>.</p>
+
+    <blockquote cite="http://googl.com"> <p>adfadsfasdfasdgdfgdfg df gdfg dfg df hdjdgkhkghjkvhjfh jdf hdhjhsd hdt hdh dyjyj dyjdj djd tfljljl;jjl l;jl jl; j; jl; jl;j;l j; ;lj ;ljlj ;j;l jl;j ;ljl jj l; jlj lk;j ;klj ;lj</p></blockquote>
+
+    <p><abbr title="Hyper text Mark-up Language">HTML</abbr> </p>
+    <hr /> <br />
+    <p>Этот <strong><em>текст пробный</em></strong></p>
+    <small>тест</small>
+    <pre>ljljl       ljljlkj      lkjlk</pre>
+    <big>тест биг</big>
+
+</body>
+<div class="my-5 pt-5 text-muted text-center text-small" th:insert="blocks/footer :: footer"></div>
+</html>
